@@ -1,6 +1,7 @@
 {
     'name': "Domen Module - Product Reference Code Validator",
-
+    "author": "Domen Ocepek, OptiCode.si",
+    "website": "https://OptiCode.si",
     'summary': "Validates product reference code format with semicolon validation",
 
     'description': """
@@ -26,9 +27,6 @@ Valid Formats:
 
 The validation ensures data consistency for your product catalog.
     """,
-
-    'author': "Domen Ocepek, OptiCode.si",
-    'website': "https://www.opticode.si",
 
     'category': 'Inventory/Inventory',
     'version': '0.1.1',
