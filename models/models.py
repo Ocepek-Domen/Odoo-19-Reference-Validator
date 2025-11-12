@@ -43,6 +43,7 @@ class ValidationMixin(models.AbstractModel):
 
 
 class ProductTemplate(models.Model):
+    _name = 'product.template'
     _inherit = ['product.template', 'validation.mixin']
 
     @api.onchange('default_code')
@@ -67,6 +68,7 @@ class ProductTemplate(models.Model):
 
 
 class ProductProduct(models.Model):
+    _name = 'product.product'
     _inherit = ['product.product', 'validation.mixin']
 
     @api.onchange('default_code')
