@@ -18,26 +18,11 @@ class ValidationMixin(models.AbstractModel):
         if semicolon_count not in (0, 3):
             # Return the error message if validation fails
             return _(
-                'Polje Referenca mora vsebovati natanko 3 podpičja ";". Polje lahko vsebuje tudi poševnico "/" in zvezdice "*".\n\n'
-                '═══ BASIC (1-on-1) ═══\n'
+                'Polje Referenca mora vsebovati natanko 3 podpičja ";" ali nobenega.\n\n'
+                'Primer validnih vrednosti:\n'
                 'Xiaomi;Redmi Note 13 Pro 4g;Popravilo kamere;\n'
                 'Apple;iPhone 16 Plus;Menjava baterije;\n'
                 'KuKirin;G2 Pro;Nosilec blatnika;\n\n'
-                '═══ GENERAL (1-to-many) - Vsi brandi, vse znamke ═══\n'
-                '*;*;Garancija: Popravilo level 1;\n'
-                '*;*;Garancija: Pošiljanje preko pošte - TV;\n\n'
-                '═══ STORITVE - Dodane storitve v trgovini in trackerju ═══\n'
-                '*;*;Obvescanje stanja servisa prek SMSa;\n'
-                '*;*;Dodatno zavarovanje pošiljke;\n'
-                '*;*;*kurirske službe;\n\n'
-                '═══ MULTI (1-to-many) ═══\n'
-                'Samsung;*S24 FE;Menjava baterije;         → Vsi S24 FE\n'
-                'Asus;Zenfone 8 Flip;Menjava ekrana*;      → Več storitev menjave ekrana\n'
-                'Segway;*;Menjava pogonskega*;             → Vsi modeli Segway\n'
-                'Samsung;Galaxy Xcover 4*;Popravilo ohišja; → Vse variacije Xcover 4/4S\n'
-                '*;iPhone 13 Pro Max;Popravilo stekla*;    → Original in B klasa\n\n'
-                '═══ EXTRA ═══\n'
-                'Apple;*16e/*17;Menjava ekrana*;           → Modeli z 16e ali 17\n'
             )
         return None
 
